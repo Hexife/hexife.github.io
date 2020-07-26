@@ -3,29 +3,39 @@ layout: default
 ---
 
 <section>
-
-	{% for post in site.posts %}
-		{% unless post.next %}
-			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
-		{% else %}
-			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-			{% if year != nyear %}
-				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
-			{% endif %}
-		{% endunless %}
-
-		<ul>
-			<li>
-				<div class="post-date code">
-					<span>{{ post.date | date: "%b %d" }}</span>
-				</div>
+        <h3 class="code"> About </h3>
+                <ul>
+                        <li>
+                                <div class="title">
+                                     <strong> * Computer Security Researcher</strong>
+                                </div>
 				<div class="title">
-				      {{ post.title }}
+				     <strong> * <a href="https://reverselab.kr">Reverselab</a> </strong>
 				</div>
 			</li>
 		</ul>
+</section>
 
-	{% endfor %}
-
+<section>
+	<h3 class="code"> Education </h3>
+                <ul>
+                        <li>
+                                <div class="post-date code">
+                                        <span>SEP, 2019</span>
+                                </div>
+                                <div class="title">
+                                      M.S, Graduate School of Information Security(GSIS), KAIST WSP Lab
+                                </div>
+                        </li>
+                </ul>
+		<ul>
+			<li>
+				<div class="post-date code">
+					<span>Feb, 2017</span>
+				</div>
+				<div class="title">
+				      B.S, Department Of Software, Dankook University
+				</div>
+			</li>
+		</ul>
 </section>
